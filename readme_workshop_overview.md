@@ -114,14 +114,14 @@ Set up your own GitHub account. Familiarize yourself, if necessary with the sugg
 
 ### Part 1 - Principles of Survey Research
 
-#### [Survey Design Process](survey_research.html)
+#### [Survey Design Process](survey_research.md)
 
 This module covers a short overview of survey design. Areas covered include operational definition of a survey, questionnare construction, and measurement assessment.
 
 -   **Recommended Reading**:
     -   M.K. Trochim, William (2020). Research Methods Knowledge Base. Conjoint.ly, Sydney, Australia. [Read for free here](https://conjointly.com/kb/).
 
-#### [Survey Data Management and Analysis](survey_data_management_and_analysis.html)
+#### [Survey Data Management and Analysis](survey_data_management_and_analysis.md)
 
 This module covers a short overview of survey management and analysis. Areas covered include exposure to `survey` and `pewmethods` packages while working through survey data.
 
@@ -135,7 +135,7 @@ This module covers a short overview of survey management and analysis. Areas cov
 
 ### Part 2 - Working with Qualtrics and qualtRics Package
 
-#### [Qualtrics Overview](qualtrics_overview.html)
+#### [Qualtrics Overview](qualtrics_overview.md)
 
 This module covers the workflow of qualtrics and the typical structure of a survey imported into R. In addition,
 a quick setup of the qualtRics package will be given as an alternative to access data via API.
@@ -144,6 +144,6 @@ a quick setup of the qualtRics package will be given as an alternative to access
 
 ### Part 3 - Parallel Reporting
 
-#### [Parametering Survey Analysis]
+#### [Parametering Survey Analysis](parameter.md)
 
 > **Goal**: Parameterizing report for reporting to multiple organizations
