@@ -13,7 +13,7 @@ We will be working with two R survey packages that focus on survey data manageme
 This excercise is adapted from tutorials from the Pew Research Center and part-time job experience as a Research Assistant at Bank Street College.
 
 
-```{r, include=FALSE}
+```{r}
 library(tidyr)
 library(dplyr)
 #install.packages("devtools")
@@ -26,7 +26,7 @@ pewsurvey <- pewmethods::dec13_excerpt
 
 First, lets get a quick glance at the survey structure. While there are many ways to explore the structure and get a description of data, I usually use `summary` base function to get a glimpse into the data and summary statistics for each item. 
 
-```{r, echo=FALSE}
+```{r}
 summary(pewsurvey)
 ```
 
@@ -36,7 +36,7 @@ The survey data starts with a response ID (psraid) which helps ensure data inter
 
 Next, the questions are enumerated based on a widely used survey convention where question and corresponding n position in the survey are placed as the header. This convention allows for quicker and cleaner output of survey data. Usually, other software packages such as SASS or SPSS store questions under "labels". Otherwise, a reference object should be rendered. In this case, we can get the labels using the `pewmethods` package function called `get_spss_label`  
 
-```{r, echo=FALSE}
+```{r}
 get_spss_label(pewsurvey,"q1") #bipolar 
 get_spss_label(pewsurvey,"q2") #unipolar
 ```
@@ -45,7 +45,7 @@ Here we see two questions that are related. The first question asks a bipolar qu
 
 Because these two questions are related, it makes sense to combine them to see how attitude ranges within these two spectrums. These following operation is commonly used in scenerios of questions being logically linked together but spreadout through multiple questions.  
 
-```{r,echo=FALSE}
+```{r}
 pewsurvey <- pewsurvey %>%
   mutate(
     obama_approval_scale = fct_case_when(
@@ -62,7 +62,7 @@ Now, lets look at weights and how critical they are in any type of sample analys
 
 The first weight is a survey weight to properly represent the US population. The next is this same weight but adjusted for landlines and cell phones respecively. These were the two ways the
 
-```{r, echo=FALSE}
+```{r}
 get_totals("obama_approval_scale", pewsurvey, 
            wt = c("weight", "llweight", "cellweight"), digits = 1)
 ```
