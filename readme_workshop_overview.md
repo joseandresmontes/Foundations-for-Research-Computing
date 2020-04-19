@@ -146,4 +146,6 @@ a quick setup of the qualtRics package will be given as an alternative to access
 
 #### [Parametering Survey Analysis](parameter.html)
 
+This short module covers how parameterizing an analysis per organization can work. Useful for using a survey analysis template and scaling across different organizations.
+
 > **Goal**: Parameterizing report for reporting to multiple organizations
